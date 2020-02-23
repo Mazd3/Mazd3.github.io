@@ -277,6 +277,12 @@ button.accordion.active:after {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .content__title {
@@ -296,6 +302,20 @@ button.accordion.active:after {
   border: 2px solid #5b7c77;
   padding: 20px;
   border-radius: 25px;
+}
+
+.content-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .dark {
@@ -336,7 +356,7 @@ button.accordion.active:after {
     font-size: 12px;
   }
   .content__paragraph {
-    font-size: 9px;
+    font-size: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
