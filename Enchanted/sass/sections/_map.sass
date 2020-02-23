@@ -1,0 +1,64 @@
+
+.accordion
+  background-color: #fff
+  color: #222
+  cursor: pointer
+  padding: 18px
+  width: 100%
+  text-align: left
+  border: none
+  outline: none
+  transition: 0.4s
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover
+  background-color: #ce3669
+  color: #fff
+/* Style the accordion panel. Note: hidden by default */
+.panel
+  +reg
+  border: 3px solid #ce3669
+  border-top: none
+  position: absolute
+  padding: 0 15px
+  width: 49%
+  background-color: #fff
+  display: none
+  overflow: hidden
+
+.map
+	position: absolute
+	top: 0
+	left: 0
+	background: #333 url(../img/bg.jpg) repeat
+	background-size: cover
+	width: 100%
+	&-wrap
+		margin-top: 70px
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-around
+		margin-bottom: 600px
+	&__item
+		display: inline-block
+		margin: 5px
+		width: 49%
+
+button.accordion:after
+	content: '\002B'
+	color: #222
+	font-weight: bold
+	float: right
+	margin-left: 5px
+
+button.accordion.active:after
+	content: "\2212"
+	color: #fff
+
+@media (max-width: 999px)
+	.map
+		&__item
+			font-size: 12px
+			width: 95%
+	.panel
+		width: 95%

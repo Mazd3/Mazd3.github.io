@@ -1,0 +1,343 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+  position: relative;
+}
+
+@font-face {
+  font-family: 'Bergen Sans';
+  src: local("Bergen Sans Regular"), local("Bergen-Sans-Regular"), url("../fonts/BergenSans.woff2") format("woff2"), url("../fonts/BergenSans.woff") format("woff"), url("../fonts/BergenSans.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bergen Sans';
+  src: local("Bergen Sans SemiBold"), local("Bergen-Sans-SemiBold"), url("../fonts/BergenSans-SemiBold.woff2") format("woff2"), url("../fonts/BergenSans-SemiBold.woff") format("woff"), url("../fonts/BergenSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Bergen Sans', sans-serif;
+  font-weight: 600;
+}
+
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  width: 100vw;
+  z-index: 999;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  min-height: 60px;
+}
+
+.navbar__item {
+  font-family: 'Bergen Sans', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  text-decoration: none;
+  color: #393939;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.navbar__item:hover {
+  color: #ce3669;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1024px) {
+  .navbar__item {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 568px) {
+  .navbar__item {
+    font-size: 12px;
+  }
+}
+
+.hero {
+  background: #333 url(../img/bg.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.hero-name {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 20vh;
+  margin-left: 5vw;
+  background-color: rgba(52, 71, 68, 0.5);
+  width: 300px;
+  height: 600px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 80px;
+}
+
+.hero__title {
+  font-family: 'Bergen Sans', sans-serif;
+  font-weight: 600;
+  font-size: 74px;
+  line-height: 60px;
+  color: #fff;
+  margin: 0 0 70px;
+}
+
+.hero__subtitle {
+  font-family: 'Bergen Sans', sans-serif;
+  font-weight: 400;
+  font-size: 38px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+  .hero-name {
+    width: 200px;
+    height: 400px;
+    padding-left: 40px;
+    top: 30vh;
+  }
+  .hero__title {
+    font-size: 54px;
+    line-height: 40px;
+    margin: 0 0 50px;
+  }
+  .hero__subtitle {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 568px) {
+  .hero-name {
+    width: 150px;
+    height: 300px;
+    padding-left: 40px;
+  }
+  .hero__title {
+    font-size: 38px;
+    line-height: 30px;
+    margin: 0 0 40px;
+  }
+  .hero__subtitle {
+    font-size: 22px;
+  }
+}
+
+.accordion {
+  background-color: #fff;
+  color: #222;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ce3669;
+  color: #fff;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  font-family: 'Bergen Sans', sans-serif;
+  font-weight: 400;
+  border: 3px solid #ce3669;
+  border-top: none;
+  position: absolute;
+  padding: 0 15px;
+  width: 49%;
+  background-color: #fff;
+  display: none;
+  overflow: hidden;
+}
+
+.map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #333 url(../img/bg.jpg) repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.map-wrap {
+  margin-top: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 600px;
+}
+
+.map__item {
+  display: inline-block;
+  margin: 5px;
+  width: 49%;
+}
+
+button.accordion:after {
+  content: '\002B';
+  color: #222;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+button.accordion.active:after {
+  content: "\2212";
+  color: #fff;
+}
+
+@media (max-width: 999px) {
+  .map__item {
+    font-size: 12px;
+    width: 95%;
+  }
+  .panel {
+    width: 95%;
+  }
+}
+
+.content {
+  height: 95vh;
+  width: 100%;
+  background-color: #5b7c77;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.content__page {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 80%;
+}
+
+.content-subtitle {
+  font-size: 18px;
+  background-color: #fff;
+  padding: 5px 10px;
+}
+
+.content-text {
+  margin-top: 15px;
+  background-color: #fff;
+  height: 70vh;
+  padding: 20px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content__title {
+  margin: 0 0 20px 0;
+  font-size: 26px;
+  font-family: 'Bergen Sans', sans-serif;
+  font-weight: 600;
+}
+
+.content__paragraph {
+  font-family: 'Bergen Sans', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.content-border {
+  border: 2px solid #5b7c77;
+  padding: 30px;
+  border-radius: 25px;
+}
+
+.dark {
+  background-color: #344744;
+}
+
+.thin {
+  max-width: 720px;
+}
+
+.thin h3 {
+  text-align: center;
+}
+
+.thin .content-text {
+  height: 100%;
+}
+
+@media (max-width: 900px) {
+  .content {
+    font-size: 15px;
+  }
+  .content__title {
+    margin: 0 0 15px 0;
+    font-size: 22px;
+  }
+  .content__paragraph {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 750px) {
+  .content {
+    font-size: 12px;
+  }
+  .content__title {
+    margin: 0 0 10px 0;
+    font-size: 12px;
+  }
+  .content__paragraph {
+    font-size: 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Bergen Sans';
+    src: local('Bergen Sans Regular'), local('Bergen-Sans-Regular'),
+        url('../fonts/BergenSans.woff2') format('woff2'),
+        url('../fonts/BergenSans.woff') format('woff'),
+        url('../fonts/BergenSans.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Bergen Sans';
+    src: local('Bergen Sans SemiBold'), local('Bergen-Sans-SemiBold'),
+        url('../fonts/BergenSans-SemiBold.woff2') format('woff2'),
+        url('../fonts/BergenSans-SemiBold.woff') format('woff'),
+        url('../fonts/BergenSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@mixin reg {
+    font-family: 'Bergen Sans', sans-serif;
+    font-weight: 400;
+}
+
+@mixin semibold {
+    font-family: 'Bergen Sans', sans-serif;
+    font-weight: 600;
+}
