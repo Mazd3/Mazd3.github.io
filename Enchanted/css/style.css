@@ -270,7 +270,7 @@ button.accordion.active:after {
 .content-text {
   margin-top: 10px;
   background-color: #fff;
-  height: 70vh;
+  height: 75vh;
   padding: 20px 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -336,7 +336,7 @@ button.accordion.active:after {
     font-size: 12px;
   }
   .content__paragraph {
-    font-size: 10px;
+    font-size: 9px;
   }
 }
 /*# sourceMappingURL=style.css.map */
