@@ -286,13 +286,14 @@ button.accordion.active:after {
 }
 
 .content__title {
-  margin: 0 0 20px 0;
+  margin: 0;
   font-size: 26px;
   font-family: 'Bergen Sans', sans-serif;
   font-weight: 600;
 }
 
 .content__paragraph {
+  margin-bottom: 0;
   font-family: 'Bergen Sans', sans-serif;
   font-weight: 400;
   font-size: 20px;
@@ -301,7 +302,7 @@ button.accordion.active:after {
 .content-border {
   border: 2px solid #5b7c77;
   padding: 20px;
-  border-radius: 25px;
+  border-radius: 15px;
 }
 
 .content-wrap {
@@ -332,7 +333,7 @@ button.accordion.active:after {
 
 .thin .content-text {
   height: 100%;
-  padding: 10px;
+  padding: 15px;
 }
 
 @media (max-width: 900px) {
@@ -340,7 +341,6 @@ button.accordion.active:after {
     font-size: 14px;
   }
   .content__title {
-    margin: 0 0 10px 0;
     font-size: 22px;
   }
   .content__paragraph {
@@ -353,7 +353,6 @@ button.accordion.active:after {
     font-size: 10px;
   }
   .content__title {
-    margin: 0 0 5px 0;
     font-size: 12px;
   }
   .content__paragraph {
