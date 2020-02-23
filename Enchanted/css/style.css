@@ -264,7 +264,7 @@ button.accordion.active:after {
 
 .content-subtitle {
   background-color: #fff;
-  padding: 5px 5px;
+  padding: 8px 10px 5px 10px;
 }
 
 .content-text {
@@ -316,7 +316,7 @@ button.accordion.active:after {
 
 @media (max-width: 900px) {
   .content {
-    font-size: 15px;
+    font-size: 14px;
   }
   .content__title {
     margin: 0 0 10px 0;
@@ -329,7 +329,7 @@ button.accordion.active:after {
 
 @media (max-width: 750px) {
   .content {
-    font-size: 12px;
+    font-size: 10px;
   }
   .content__title {
     margin: 0 0 5px 0;
