@@ -247,6 +247,9 @@ button.accordion.active:after {
   display: flex;
   padding: 0;
   margin: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .content__page {
@@ -261,22 +264,19 @@ button.accordion.active:after {
 
 .content-subtitle {
   background-color: #fff;
-  padding: 5px 10px;
+  padding: 5px 5px;
 }
 
 .content-text {
-  margin-top: 15px;
+  margin-top: 10px;
   background-color: #fff;
   height: 70vh;
-  padding: 20px 25px;
+  padding: 20px 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .content__title {
@@ -294,7 +294,7 @@ button.accordion.active:after {
 
 .content-border {
   border: 2px solid #5b7c77;
-  padding: 30px;
+  padding: 20px;
   border-radius: 25px;
 }
 
@@ -319,7 +319,7 @@ button.accordion.active:after {
     font-size: 15px;
   }
   .content__title {
-    margin: 0 0 15px 0;
+    margin: 0 0 10px 0;
     font-size: 22px;
   }
   .content__paragraph {
@@ -332,11 +332,11 @@ button.accordion.active:after {
     font-size: 12px;
   }
   .content__title {
-    margin: 0 0 10px 0;
+    margin: 0 0 5px 0;
     font-size: 12px;
   }
   .content__paragraph {
-    font-size: 10px;
+    font-size: 11px;
   }
 }
 /*# sourceMappingURL=style.css.map */
