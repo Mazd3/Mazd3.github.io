@@ -331,13 +331,17 @@ button.accordion.active:after {
   text-align: center;
 }
 
+.thin p {
+  margin: 10px 0;
+}
+
 .thin .content-text {
   height: 100%;
   padding: 15px;
 }
 
 @media (max-width: 900px) {
-  .content {
+  .content-subtitle {
     font-size: 14px;
   }
   .content__title {
